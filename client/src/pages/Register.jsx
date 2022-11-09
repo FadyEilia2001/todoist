@@ -39,6 +39,7 @@ const Register = () => {
     if (!formData.email || !formData.password) {
       console.log("missing email or password");
       displayAlert();
+      hideAlert();
     }
     if (!isMember) {
       if (!formData.name || !formData.confirmPassword) {

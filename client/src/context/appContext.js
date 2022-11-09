@@ -4,20 +4,22 @@ import reducer from "./reducer";
 import { DISPLAY_ALERT, HIDE_ALERT } from "./action";
 
 export const initialValues = {
-  alertText: "",
-  alertDisplay: false,
+  alertText: "test",
+  alertDisplay: true,
   alertClass: "",
 };
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const displayAlert = (text) => {
+  const displayAlert = () => {
     dispatch({ type: DISPLAY_ALERT });
   };
 
   const hideAlert = () => {
-    dispatch({ type: HIDE_ALERT });
+    setTimeout(() => {
+      dispatch({ type: HIDE_ALERT });
+    }, 3000);
   };
   const [state, dispatch] = useReducer(reducer, initialValues);
   // const [state, setState] = useState(initialValues);
