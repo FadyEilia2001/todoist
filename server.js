@@ -9,6 +9,9 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 
 app.get("/", (req, res) => res.send("Hello World!"));
+//routers
+const userRouter = require("./routes/userRoutes");
+app.use("/api/v1/auth", userRouter);
 
 //error middleware
 const notFound = require("./middleware/not-found");
