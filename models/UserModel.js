@@ -10,9 +10,8 @@ const UserSchema = new mongoose.Schema({
     maxLength: 15,
     minLength: 3,
     validate: {
-      validator: (firstName) =>
-        validator.isAlpha(firstName, ["en-US"], { ignore: " " }),
-      message: "First name must be all letters",
+      validator: (name) => validator.isAlpha(name, ["en-US"], { ignore: " " }),
+      message: "Name field must be all letters",
     },
   },
   lastName: {
@@ -24,6 +23,7 @@ const UserSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, "Please provide an email address"],
+    unique: true,
     validate: {
       validator: validator.isEmail,
       message: "please provide valid email",
@@ -46,18 +46,18 @@ const UserSchema = new mongoose.Schema({
 });
 
 UserSchema.pre("save", async function () {
-  const salt = await bcrypt.genSalt(10);
-  const hashedPassword = await bcrypt.hash(this.password, salt);
-});
-
-UserSchema.method.comparePassword = async function (candidatePassword) {
   if (!this.isModified("password")) return;
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
+});
+
+UserSchema.methods.comparePassword = async function (candidatePassword) {
+  const isMatch = await bcrypt.compare(candidatePassword, this.password);
+  return isMatch;
 };
 
-UserSchema.method.createJWT = async function () {
-  return jwt.sign({ userId: this._id }, SecretKey, {
+UserSchema.methods.createJWT = async function () {
+  return jwt.sign({ userId: this._id }, "SecretKey", {
     expiresIn: "30d",
   });
 };
