@@ -9,14 +9,15 @@ const register = async (req, res) => {
     throw new BadRequestError("Must provide all values");
   }
 
-  // //check if user already exists
-  // const duplicateUser = UserModel.findOne({ email });
+  //check if user already exists
+  const duplicateUser = await UserModel.findOne({ email });
   // console.log("duplicate user", duplicateUser);
-  // if (duplicateUser) {
-  //   throw new BadRequestError(
-  //     "Email address already exists, Please provide a different email address"
-  //   );
-  // }
+  if (duplicateUser) {
+    throw new BadRequestError(
+      "Email address already exists, Please provide a different email address"
+    );
+  }
+  console.log(duplicateUser);
   const user = await UserModel.create(req.body);
 
   const token = await user.createJWT();
@@ -31,7 +32,7 @@ const login = async (req, res) => {
   if (!email || !password) {
     throw new BadRequestError("Must Provide all values");
   }
-  const user = user.findOne({ email });
+  const user = await UserModel.findOne({ email });
   const isPasswordCorrect = await user.comparePassword(password);
 
   if (!isPasswordCorrect) {
