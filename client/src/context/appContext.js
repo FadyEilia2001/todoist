@@ -24,7 +24,6 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialValues);
 
-  console.log(state);
   //alert functions
   const displayAlert = (alertMsg) => {
     dispatch({ type: DISPLAY_ALERT, payload: { msg: alertMsg } });
@@ -49,7 +48,7 @@ export const AppProvider = ({ children }) => {
         payload: { token: response.data.token, user: response.data.user },
       });
 
-      localStorage.setItem("accessToken", response.data.token);
+      localStorage.setItem("accessToken", `Bearer ${response.data.token}`);
       localStorage.setItem("user", JSON.stringify(response.data.user));
     } catch (error) {
       console.log(error);
@@ -76,12 +75,3 @@ export const AppProvider = ({ children }) => {
 export const useAppContext = () => {
   return useContext(AppContext);
 };
-
-// data
-// :
-// token
-// :
-// "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzZkYzdjNTA4ZmEyYTllYjg2ZGUxOTMiLCJpYXQiOjE2NjgxMzg5NDksImV4cCI6MTY3MDczMDk0OX0.spfXINJrdhYYqtvePIRIKw00ISKAF8Qv1pvTUd4RErY"
-// user
-// :
-// {firstName: 'fady', email: 'Fady2e434@gmail.com'}

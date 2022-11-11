@@ -1,13 +1,7 @@
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
-import { Divider } from "antd";
-import {
-  FacebookOutlined,
-  GithubOutlined,
-  GooglePlusOutlined,
-  LinkedinOutlined,
-  LoginOutlined,
-} from "@ant-design/icons";
+
+import { LoginOutlined } from "@ant-design/icons";
 
 import getMoreDone from "../assets/imgs/getMoreDone.webp";
 import clearYourMind from "../assets/imgs/clearYourMind.webp";
@@ -30,12 +24,12 @@ const Landing = () => {
         <p className="md:text-[1.5rem] p-0 m-0">
           The world’s #1 task manager and to-do list app.
         </p>
-        <button className="relative mt-8 py-3 px-12 mr-4 bg-red-500 rounded-xl text-white border-none text-xl font-medium tracking-wide hover:bg-red-700 cursor-pointer">
-          <LoginOutlined className="mr-4 animate-pulse" />
-          <Link to="/register" className="text-white">
+        <Link to="/register" className="text-white">
+          <button className="relative mt-8 py-3 px-12 mr-4 bg-red-500 rounded-xl text-white border-none text-xl font-medium tracking-wide hover:bg-red-700 cursor-pointer hover:scale-110 hover:tracking-widest transition-all">
+            <LoginOutlined className="mr-4 animate-pulse" />
             Start for free
-          </Link>
-        </button>
+          </button>
+        </Link>
       </main>
 
       <section className="flex flex-col items-center p-4">
@@ -56,8 +50,6 @@ const Landing = () => {
             </p>
           </div>
         </div>
-
-        <Divider />
 
         <div className="container flex flex-col md:flex-row items-center justify-center mx-auto mt-12 mb-12">
           <div className="flex flex-col items-center text-center md:text-left justify-center ">

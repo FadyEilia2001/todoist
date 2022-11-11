@@ -50,16 +50,16 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:flex">
-        <button className="hidden lg:block py-3 px-12 mr-4 bg-transparent border-none text-xl text-gray-500 font-medium tracking-wide">
-          <Link to="/register" className="text-gray-500">
+        <Link to="/register" className="text-gray-500 ">
+          <button className="rounded-xl cursor-pointer hidden lg:block py-3 px-12 mr-4 bg-transparent border border-red-500 w-56 text-xl text-gray-500 font-medium tracking-wide hover:scale-105 hover:text-red-700 transition-all">
             Log in
-          </Link>
-        </button>
-        <button className="py-3 px-12 mr-4 bg-red-500 rounded-xl text-white border-none text-xl font-medium tracking-wide hover:bg-red-700 cursor-pointer">
-          <Link to="/register" className="text-white">
+          </button>
+        </Link>
+        <Link to="/register" className="text-white">
+          <button className="py-3 px-12 mr-4 bg-red-500 rounded-xl text-white border-none text-xl w-56 font-medium tracking-wide hover:bg-red-700 cursor-pointer hover:scale-105 transition-all ">
             Start for free
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
 
       <MenuUnfoldOutlined className="text-3xl mr-4 mt-3 cursor-pointer hover:text-red-500 transition-colors md:hidden" />

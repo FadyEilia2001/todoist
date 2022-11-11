@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import getMoreDone from "../assets/imgs/getMoreDone.webp";
+import React, { useState, useEffect } from "react";
 import { LoginOutlined } from "@ant-design/icons";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import reg1 from "../assets/imgs/register-imgs/reg1.jpg";
 import reg2 from "../assets/imgs/register-imgs/reg2.jpg";
@@ -14,9 +13,23 @@ import Alert from "../components/Alert";
 import { useAppContext } from "../context/appContext";
 
 const Register = () => {
-  const [isMember, setIsMember] = useState(true);
-  const { alertDisplay, displayAlert, hideAlert, registerUser, logUserIn } =
-    useAppContext();
+  const [isMember, setIsMember] = useState(false);
+  const {
+    alertDisplay,
+    displayAlert,
+    hideAlert,
+    registerUser,
+    logUserIn,
+    user,
+  } = useAppContext();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/dashboard");
+    }
+  }, [user, navigate]);
 
   // form data state
   const [formData, setFormData] = useState({
