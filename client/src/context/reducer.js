@@ -4,6 +4,9 @@ import {
   REGISTER_USER_START,
   REGISTER_USER_SUCCESS,
   REGISTER_USER_ERROR,
+  LOG_USER_START,
+  LOG_USER_SUCCESS,
+  LOG_USER_ERROR,
 } from "./action";
 
 const reducer = (state, action) => {
@@ -51,6 +54,16 @@ const reducer = (state, action) => {
       alertText: action.payload.msg,
       alertDisplay: true,
       alertClass: "bg-red-200",
+      isLoading: true,
+    };
+  }
+
+  if (action.type === LOG_USER_START) {
+    return {
+      ...state,
+      alertText: "Logging in...",
+      alertDisplay: true,
+      alertClass: "bg-green-200",
       isLoading: true,
     };
   }

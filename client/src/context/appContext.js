@@ -8,6 +8,9 @@ import {
   REGISTER_USER_START,
   REGISTER_USER_SUCCESS,
   REGISTER_USER_ERROR,
+  LOG_USER_START,
+  LOG_USER_SUCCESS,
+  LOG_USER_ERROR,
 } from "./action";
 
 export const initialValues = {
@@ -60,7 +63,15 @@ export const AppProvider = ({ children }) => {
   };
 
   const logUserIn = async () => {
-    console.log("logging user in");
+    const { email, password } = FormData;
+    dispatch({ type: LOG_USER_START });
+    try {
+      const response = await axios.post("/api/v1/auth/login", {
+        password,
+        email,
+      });
+      console.log(response.data);
+    } catch (error) {}
   };
 
   return (
