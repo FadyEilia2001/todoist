@@ -54,7 +54,7 @@ const reducer = (state, action) => {
       alertText: action.payload.msg,
       alertDisplay: true,
       alertClass: "bg-red-200",
-      isLoading: true,
+      isLoading: false,
     };
   }
 
@@ -65,6 +65,27 @@ const reducer = (state, action) => {
       alertDisplay: true,
       alertClass: "bg-green-200",
       isLoading: true,
+    };
+  }
+  if (action.type === LOG_USER_SUCCESS) {
+    return {
+      ...state,
+      alertText: "successful logIn redirecting...",
+      alertDisplay: true,
+      alertClass: "bg-green-200",
+      isLoading: false,
+      token: action.payload.token,
+      user: action.payload.user,
+    };
+  }
+
+  if (action.type === LOG_USER_ERROR) {
+    return {
+      ...state,
+      alertText: action.payload.msg,
+      alertDisplay: true,
+      alertClass: "bg-red-200",
+      isLoading: false,
     };
   }
   throw new Error(`no such action: ${action.type}`);

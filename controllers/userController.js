@@ -11,13 +11,12 @@ const register = async (req, res) => {
 
   //check if user already exists
   const duplicateUser = await UserModel.findOne({ email });
-  ;
   if (duplicateUser) {
     throw new BadRequestError(
       "Email address already exists, Please provide a different email address"
     );
   }
-  
+
   const user = await UserModel.create(req.body);
 
   const token = await user.createJWT();
@@ -27,12 +26,20 @@ const register = async (req, res) => {
     .json({ user: { firstName: user.firstName, email: user.email }, token });
 };
 
-const login = async (req, res) => {
+const loginUser = async (req, res) => {
   const { email, password } = req.body;
+
   if (!email || !password) {
     throw new BadRequestError("Must Provide all values");
   }
-  const user = await UserModel.findOne({ email });
+  const user = await UserModel.findOne({
+    email,
+  });
+
+  if (!user) {
+    throw new UnauthorizedError("no user found with this email");
+  }
+
   const isPasswordCorrect = await user.comparePassword(password);
 
   if (!isPasswordCorrect) {
@@ -46,4 +53,4 @@ const login = async (req, res) => {
     .json({ user: { firstName: user.firstName, email: user.email }, token });
 };
 
-module.exports = { register, login };
+module.exports = { register, loginUser };

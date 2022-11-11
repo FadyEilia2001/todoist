@@ -40,11 +40,14 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: REGISTER_USER_START });
 
     try {
-      const response = await axios.post("/api/v1/auth/register", {
-        password,
-        firstName: name,
-        email,
-      });
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/auth/register",
+        {
+          password,
+          firstName: name,
+          email,
+        }
+      );
 
       dispatch({
         type: REGISTER_USER_SUCCESS,
@@ -62,16 +65,29 @@ export const AppProvider = ({ children }) => {
     }
   };
 
-  const logUserIn = async () => {
-    const { email, password } = FormData;
+  const logUserIn = async ({ email, password }) => {
     dispatch({ type: LOG_USER_START });
     try {
-      const response = await axios.post("/api/v1/auth/login", {
-        password,
-        email,
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/auth/login",
+        {
+          email,
+          password,
+        }
+      );
+      dispatch({
+        type: LOG_USER_SUCCESS,
+        payload: { token: response.data.token, user: response.data.user },
       });
-      console.log(response.data);
-    } catch (error) {}
+      localStorage.setItem("accessToken", `Bearer ${response.data.token}`);
+      localStorage.setItem("user", JSON.stringify(response.data.user));
+    } catch (error) {
+      console.log(error);
+      dispatch({
+        type: LOG_USER_ERROR,
+        payload: { msg: error.response.data.msg },
+      });
+    }
   };
 
   return (

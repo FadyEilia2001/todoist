@@ -79,8 +79,7 @@ const Register = () => {
     }
 
     if (isMember) {
-      const { email, password } = formData;
-      logUserIn();
+      logUserIn({ ...formData });
     } else {
       const { name, email, password } = formData;
       registerUser({ name, email, password });
