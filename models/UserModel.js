@@ -29,11 +29,6 @@ const UserSchema = new mongoose.Schema({
       message: "please provide valid email",
     },
   },
-  location: {
-    type: String,
-    minLength: 3,
-    default: "my location",
-  },
   password: {
     type: String,
     required: [true, "Please provide a password"],
@@ -57,8 +52,8 @@ UserSchema.methods.comparePassword = async function (candidatePassword) {
 };
 
 UserSchema.methods.createJWT = async function () {
-  return jwt.sign({ userId: this._id }, "SecretKey", {
-    expiresIn: "30d",
+  return jwt.sign({ userId: this._id }, process.env.JWT_SECRET, {
+    expiresIn: process.env.JWT_LIFETIME,
   });
 };
 

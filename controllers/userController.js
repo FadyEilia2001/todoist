@@ -11,13 +11,13 @@ const register = async (req, res) => {
 
   //check if user already exists
   const duplicateUser = await UserModel.findOne({ email });
-  // console.log("duplicate user", duplicateUser);
+  ;
   if (duplicateUser) {
     throw new BadRequestError(
       "Email address already exists, Please provide a different email address"
     );
   }
-  console.log(duplicateUser);
+  
   const user = await UserModel.create(req.body);
 
   const token = await user.createJWT();

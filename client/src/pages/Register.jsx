@@ -15,8 +15,8 @@ import { useAppContext } from "../context/appContext";
 
 const Register = () => {
   const [isMember, setIsMember] = useState(true);
-  const { alertDisplay, displayAlert, hideAlert } = useAppContext();
-  console.log(displayAlert);
+  const { alertDisplay, displayAlert, hideAlert, registerUser, logUserIn } =
+    useAppContext();
 
   // form data state
   const [formData, setFormData] = useState({
@@ -36,18 +36,11 @@ const Register = () => {
   //submit form
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.email || !formData.password) {
-      console.log("missing email or password");
-      displayAlert();
-      hideAlert();
-    }
-    if (!isMember) {
-      if (!formData.name || !formData.confirmPassword) {
-        console.log("missing name or confirm password");
-      }
-      if (formData.Password !== formData.confirmPassword) {
-        console.log("password do not match");
-      }
+    hideAlert();
+    if (isMember) {
+      logUserIn();
+    } else {
+      registerUser();
     }
   };
 
@@ -119,7 +112,7 @@ const Register = () => {
               value={formData.confirmPassword}
             />
           )}
-          <button className="py-3 px-16 w-64 bg-red-600 rounded-xl text-white border-none text-xl font-medium tracking-wide hover:bg-red-700 cursor-pointer hover:scale-105 transition-transform ">
+          <button className="py-3 px-16 w-64 bg-red-600 rounded-xl text-white border-none font-medium tracking-wide hover:bg-red-700 cursor-pointer hover:scale-105 transition-transform ">
             <span className="mr-4">
               <LoginOutlined />
             </span>
