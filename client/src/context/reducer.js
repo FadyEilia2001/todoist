@@ -7,9 +7,17 @@ import {
   LOG_USER_START,
   LOG_USER_SUCCESS,
   LOG_USER_ERROR,
+  TOGGLE_MOBILE_MENU,
 } from "./action";
 
 const reducer = (state, action) => {
+  if (action.type === TOGGLE_MOBILE_MENU) {
+    return {
+      ...state,
+      mobilMenuDisplay: !state.mobilMenuDisplay,
+    };
+  }
+
   if (action.type === DISPLAY_ALERT) {
     return {
       ...state,
