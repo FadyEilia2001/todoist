@@ -6,7 +6,9 @@ const Alert = () => {
 
   return (
     <div className="w-64 flex justify-center">
-      <p className={`text-center rounded-l alert alert-${alertClass}`}>
+      <p
+        className={`py-2 w-full rounded-md text-lg px-4 text-black; text-center rounded-l ${alertClass}`}
+      >
         {alertText}
       </p>
     </div>

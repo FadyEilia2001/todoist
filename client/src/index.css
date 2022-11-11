@@ -9,14 +9,4 @@ html,
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .alert {
-    @apply py-2 w-full rounded-sm text-lg px-4 text-black;
-  }
-  .alert-danger {
-    @apply bg-red-200;
-  }
-  .alert-success {
-    @apply bg-green-200;
-  }
-}
+

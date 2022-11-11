@@ -37,10 +37,39 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     hideAlert();
+
+    //check for email and password on login
+    if (!formData.email || !formData.password) {
+      displayAlert();
+      setTimeout(() => {
+        hideAlert();
+      }, 4000);
+      return;
+    }
+
+    //check for all values when registering and make sure password is equal confirm password
+    if (!isMember) {
+      if (!formData.name || !formData.confirmPassword) {
+        displayAlert();
+        setTimeout(() => {
+          hideAlert();
+        }, 4000);
+        return;
+      }
+      if (formData.password !== formData.confirmPassword) {
+        displayAlert("Passwords do not match");
+        setTimeout(() => {
+          hideAlert();
+        }, 4000);
+        return;
+      }
+    }
+
     if (isMember) {
       logUserIn();
     } else {
-      registerUser();
+      const { name, email, password } = formData;
+      registerUser({ name, email, password });
     }
   };
 
