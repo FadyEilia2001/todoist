@@ -1,10 +1,12 @@
 const mongoose = require("mongoose");
-const UserModel = require("./UserModel");
+const UserSchema = require("./UserModel");
+const validator = require("validator");
 
 const TaskSchema = new mongoose.Schema({
-  User: {
+  user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: User,
+    ref: UserSchema,
+    required: [true, "please provide a user email"],
   },
   title: {
     type: String,
