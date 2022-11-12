@@ -57,7 +57,7 @@ const MobileMenu = () => {
           </button>
         </Link>
 
-        <Link to="/register" className="text-white" onClick={toggleMobileMenu}>
+        <Link to="/login" className="text-white" onClick={toggleMobileMenu}>
           <button className="py-3 px-12 mr-4 rounded-xl text-red-500 border-none text-xl w-56 font-medium tracking-wide hover:bg-red-700 cursor-pointer hover:scale-105 transition-all ">
             Log-in
           </button>

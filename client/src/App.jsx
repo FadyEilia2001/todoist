@@ -6,6 +6,7 @@ import {
   Landing,
   Dashboard,
   ComingSoon,
+  Login,
   Pricing,
   Templates,
 } from "./pages";
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
 
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/templates" element={<Templates />} />
