@@ -11,6 +11,7 @@ import {
   LOG_USER_START,
   LOG_USER_SUCCESS,
   LOG_USER_ERROR,
+  TOGGLE_MOBILE_MENU,
 } from "./action";
 
 export const initialValues = {
@@ -20,12 +21,18 @@ export const initialValues = {
   user: JSON.parse(localStorage.getItem("user")) || null,
   token: localStorage.getItem("accessToken") || null,
   isLoading: false,
+  mobilMenuDisplay: false,
 };
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialValues);
+
+  //mobile menu
+  const toggleMobileMenu = () => {
+    dispatch({ type: TOGGLE_MOBILE_MENU });
+  };
 
   //alert functions
   const displayAlert = (alertMsg) => {
@@ -92,7 +99,14 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ ...state, displayAlert, hideAlert, registerUser, logUserIn }}
+      value={{
+        ...state,
+        displayAlert,
+        hideAlert,
+        registerUser,
+        logUserIn,
+        toggleMobileMenu,
+      }}
     >
       {children}
     </AppContext.Provider>
