@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 
 const Pricing = () => {
   return (
-    <div className=" h-screen bg-gradient-to-l from-white to-red-100 flex flex-col">
+    <div className=" min-h-screen flex flex-col">
       <Navbar />
       <div className="container m-auto px-6 py-20 md:px-12 lg:px-20">
         <div className="m-auto text-center lg:w-8/12 xl:w-7/12">
