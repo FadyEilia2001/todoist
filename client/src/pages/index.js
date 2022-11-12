@@ -5,5 +5,6 @@ import Landing from "./Landing";
 import ComingSoon from "./ComingSoon";
 import Pricing from "./Pricing";
 import Templates from "./Templates";
+import Login from "./Login";
 
-export { Dashboard, Error, Register, Landing, ComingSoon, Pricing, Templates };
+export { Dashboard, Error, Register, Landing, ComingSoon, Pricing, Templates, Login };
