@@ -18,7 +18,9 @@ if (process.env.NODE_ENV !== "production") {
 app.get("/", (req, res) => res.send("Hello World!"));
 //routers
 const userRouter = require("./routes/userRoutes");
+const taskRouter = require("./routes/taskRoutes");
 app.use("/api/v1/auth", userRouter);
+app.use("/api/v1/tasks", taskRouter);
 
 //error middleware
 const notFoundMiddleware = require("./middleware/not-found");
