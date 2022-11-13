@@ -12,6 +12,8 @@ import {
   LOG_USER_SUCCESS,
   LOG_USER_ERROR,
   TOGGLE_MOBILE_MENU,
+  OPEN_SIDEBAR,
+  CLOSE_SIDEBAR,
 } from "./action";
 
 export const initialValues = {
@@ -22,6 +24,7 @@ export const initialValues = {
   token: localStorage.getItem("accessToken") || null,
   isLoading: false,
   mobilMenuDisplay: false,
+  isSidebarOpen: false,
 };
 
 const AppContext = createContext();

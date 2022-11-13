@@ -4,7 +4,8 @@ import DashboardSidebar from "../components/DashboardSidebar";
 import { useAppContext } from "../context/appContext";
 
 const Dashboard = () => {
-  const { user } = useAppContext();
+  const { user, isSidebarOpen } = useAppContext();
+
   return (
     <main className=" flex flex-col">
       {/* Navbar */}
@@ -15,12 +16,16 @@ const Dashboard = () => {
       {/* sidebar and body */}
       <div className="flex ">
         {/* sidebar */}
-        <aside className="w-64 bg-gray-100 h-screen fixed">
+        <aside
+          className={`${
+            isSidebarOpen ? "block" : "hidden"
+          } bg-gray-100 h-screen fixed w-64 z-20 md:block`}
+        >
           <DashboardSidebar />
         </aside>
 
         {/* Body */}
-        <section className="p-8 ml-64">
+        <section className="md:ml-64">
           <h2 className="">Body</h2>
         </section>
       </div>

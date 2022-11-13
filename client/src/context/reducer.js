@@ -8,6 +8,8 @@ import {
   LOG_USER_SUCCESS,
   LOG_USER_ERROR,
   TOGGLE_MOBILE_MENU,
+  OPEN_SIDEBAR,
+  CLOSE_SIDEBAR,
 } from "./action";
 
 const reducer = (state, action) => {
