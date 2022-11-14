@@ -28,14 +28,13 @@ const deleteTask = (req, res) => {
 };
 
 const getAllTasks = async (req, res) => {
-  const { email } = req.body;
- 
+  const { userId } = req.user;
 
-  if (!email) {
-    throw new BadRequestError("Please provide a valid user");
+  const user = await UserModel.findOne({ _id: userId });
+
+  if (!user) {
+    throw new BadRequestError("invalid user");
   }
-
-  const user = await UserModel.findOne({ email });
 
   const tasks = await TaskModel.find({ user: user._id });
   res.status(200).json({ msg: "OK", count: tasks.length, tasks: tasks });
