@@ -29,6 +29,7 @@ const deleteTask = (req, res) => {
 
 const getAllTasks = async (req, res) => {
   const { email } = req.body;
+ 
 
   if (!email) {
     throw new BadRequestError("Please provide a valid user");

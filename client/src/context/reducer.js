@@ -10,6 +10,7 @@ import {
   TOGGLE_MOBILE_MENU,
   OPEN_SIDEBAR,
   CLOSE_SIDEBAR,
+  TOGGLE_SIDEBAR,
 } from "./action";
 
 const reducer = (state, action) => {
@@ -17,6 +18,13 @@ const reducer = (state, action) => {
     return {
       ...state,
       mobilMenuDisplay: !state.mobilMenuDisplay,
+    };
+  }
+
+  if (action.type === TOGGLE_SIDEBAR) {
+    return {
+      ...state,
+      isSidebarOpen: !state.isSidebarOpen,
     };
   }
 

@@ -6,5 +6,24 @@ import ComingSoon from "./ComingSoon";
 import Pricing from "./Pricing";
 import Templates from "./Templates";
 import Login from "./Login";
+import Stats from "./Stats";
+import DueToday from "./DueToday";
+import AllTasks from "./AllTasks";
+import UrgentTasks from "./UrgentTasks";
+import ProtectedRoute from "./ProtectedRoute";
 
-export { Dashboard, Error, Register, Landing, ComingSoon, Pricing, Templates, Login };
+export {
+  Dashboard,
+  Error,
+  Register,
+  Landing,
+  ComingSoon,
+  Pricing,
+  Templates,
+  Login,
+  Stats,
+  DueToday,
+  AllTasks,
+  UrgentTasks,
+  ProtectedRoute,
+};

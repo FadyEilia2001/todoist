@@ -12,8 +12,8 @@ import {
   LOG_USER_SUCCESS,
   LOG_USER_ERROR,
   TOGGLE_MOBILE_MENU,
-  OPEN_SIDEBAR,
-  CLOSE_SIDEBAR,
+  TOGGLE_SIDEBAR,
+  GET_ALL_TASKS,
 } from "./action";
 
 export const initialValues = {
@@ -35,6 +35,11 @@ export const AppProvider = ({ children }) => {
   //mobile menu
   const toggleMobileMenu = () => {
     dispatch({ type: TOGGLE_MOBILE_MENU });
+  };
+
+  //toggle sidebar
+  const toggleSidebar = () => {
+    dispatch({ type: TOGGLE_SIDEBAR });
   };
 
   //alert functions
@@ -109,6 +114,7 @@ export const AppProvider = ({ children }) => {
         registerUser,
         logUserIn,
         toggleMobileMenu,
+        toggleSidebar,
       }}
     >
       {children}

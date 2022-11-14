@@ -9,6 +9,11 @@ import {
   Login,
   Pricing,
   Templates,
+  Stats,
+  DueToday,
+  AllTasks,
+  UrgentTasks,
+  ProtectedRoute,
 } from "./pages";
 
 function App() {
@@ -21,7 +26,20 @@ function App() {
 
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/templates" element={<Templates />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Stats />} />
+          <Route path="due-today" element={<DueToday />} />
+          <Route path="all-tasks" element={<AllTasks />} />
+          <Route path="urgent" element={<UrgentTasks />} />
+        </Route>
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

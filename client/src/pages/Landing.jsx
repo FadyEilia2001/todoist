@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
@@ -6,8 +7,18 @@ import { LoginOutlined } from "@ant-design/icons";
 import getMoreDone from "../assets/imgs/getMoreDone.webp";
 import clearYourMind from "../assets/imgs/clearYourMind.webp";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
+import { useAppContext } from "../context/appContext";
 
 const Landing = () => {
+  const { user } = useAppContext();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/dashboard");
+    }
+  }, [user, navigate]);
   return (
     <div>
       <Navbar />
