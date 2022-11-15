@@ -1,9 +1,10 @@
 import { PlusCircleOutlined } from "@ant-design/icons";
 import Logo from "../assets/logo/Logo.png";
 
+
 const Card = () => {
   return (
-    <div class="w-full max-w-md px-8 py-4 mt-16 md:mr-4 bg-white rounded-lg shadow-xl h-fit border-2 border-red-500">
+    <div class="w-full max-w-md px-8 py-4 mt-16 md:mr-4 bg-white rounded-lg shadow-xl h-fit border-2 mb-8 border-red-500">
       <div class="flex justify-center -mt-16 md:justify-end">
         <img
           class="object-cover w-20 h-20 border-2 border-red-500 rounded-full "

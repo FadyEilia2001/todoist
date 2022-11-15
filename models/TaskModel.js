@@ -24,6 +24,7 @@ const TaskSchema = new mongoose.Schema({
   dueDate: {
     type: Date,
     validate: validator.isDate,
+    default: Date.now(),
   },
   priority: {
     type: String,

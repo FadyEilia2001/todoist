@@ -14,6 +14,7 @@ import {
   TOGGLE_MOBILE_MENU,
   TOGGLE_SIDEBAR,
   GET_ALL_TASKS,
+  TOGGLE_NEWTASK_MODAL,
 } from "./action";
 
 export const initialValues = {
@@ -25,6 +26,7 @@ export const initialValues = {
   isLoading: false,
   mobilMenuDisplay: false,
   isSidebarOpen: false,
+  isTaskModalOpen: false,
 };
 
 const AppContext = createContext();
@@ -49,6 +51,10 @@ export const AppProvider = ({ children }) => {
 
   const hideAlert = () => {
     dispatch({ type: HIDE_ALERT });
+  };
+
+  const toggleAddTaskModal = () => {
+    dispatch({ type: TOGGLE_NEWTASK_MODAL });
   };
 
   const registerUser = async ({ name, email, password }) => {
@@ -115,6 +121,7 @@ export const AppProvider = ({ children }) => {
         logUserIn,
         toggleMobileMenu,
         toggleSidebar,
+        toggleAddTaskModal,
       }}
     >
       {children}

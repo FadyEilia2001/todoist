@@ -20,3 +20,6 @@ export const LOG_USER_ERROR = "LOG_USER_ERROR";
 
 //tasks
 export const GET_ALL_TASKS = "GET_ALL_TASKS";
+
+//newTask Modal
+export const TOGGLE_NEWTASK_MODAL = "TOGGLE_NEWTASK_MODAL";

@@ -11,6 +11,7 @@ import {
   OPEN_SIDEBAR,
   CLOSE_SIDEBAR,
   TOGGLE_SIDEBAR,
+  TOGGLE_NEWTASK_MODAL,
 } from "./action";
 
 const reducer = (state, action) => {
@@ -104,6 +105,13 @@ const reducer = (state, action) => {
       alertDisplay: true,
       alertClass: "bg-red-200",
       isLoading: false,
+    };
+  }
+
+  if (action.type === TOGGLE_NEWTASK_MODAL) {
+    return {
+      ...state,
+      isTaskModalOpen: !state.isTaskModalOpen,
     };
   }
   throw new Error(`no such action: ${action.type}`);

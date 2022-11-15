@@ -4,6 +4,8 @@ import {
   ProjectOutlined,
   DashboardOutlined,
   PlusCircleOutlined,
+  LogoutOutlined,
+  PicRightOutlined,
 } from "@ant-design/icons";
 import { useAppContext } from "../context/appContext";
 import { NavLink } from "react-router-dom";
@@ -19,16 +21,6 @@ const DashboardSidebar = () => {
     >
       <div className="overflow-y-auto py-4 bg-gray-50 h-screen">
         {/* Dashboard */}
-        <NavLink
-          to="/dashboard"
-          className="flex items-center w-full justify-between hover:bg-gray-200 p-4 transition-all cursor-pointer "
-        >
-          <div className="flex items-center space-x-2">
-            <DashboardOutlined className="text-red-500 text-base mt-1" />
-            <span className="p-0 m-0">Stats</span>
-          </div>
-          <p className="p-0 m-0"></p>
-        </NavLink>
 
         {/* Menu Item 1 */}
         <NavLink
@@ -38,7 +30,7 @@ const DashboardSidebar = () => {
           <div className="flex items-center space-x-2">
             <CalendarOutlined className="text-red-500 text-base mt-1" />
 
-            <span className="p-0 m-0">Due Today</span>
+            <span className="p-0 m-0 text-black">Due Today</span>
           </div>
           <p className="p-0 m-0">10</p>
         </NavLink>
@@ -51,9 +43,9 @@ const DashboardSidebar = () => {
           <div className="flex items-center space-x-2">
             <ProfileOutlined className="text-red-500 text-base mt-1" />
 
-            <span className="p-0 m-0">All Tasks</span>
+            <span className="p-0 m-0 text-black">All Tasks</span>
           </div>
-          <p className="p-0 m-0">21</p>
+          <p className="p-0 m-0">4</p>
         </NavLink>
 
         {/* Menu item 3 */}
@@ -62,12 +54,31 @@ const DashboardSidebar = () => {
           className="flex items-center w-full justify-between hover:bg-gray-200 p-4 transition-all cursor-pointer"
         >
           <div className="flex items-center space-x-2">
-            <ProfileOutlined className="text-red-500 text-base mt-1" />
+            <PicRightOutlined className="text-red-500 text-base mt-1" />
 
-            <span className="p-0 m-0">Urgent</span>
+            <span className="p-0 m-0 text-black">Urgent</span>
           </div>
           <p className="p-0 m-0">21</p>
         </NavLink>
+
+        <NavLink
+          to="/dashboard"
+          className="flex items-center w-full justify-between hover:bg-gray-200 p-4 transition-all cursor-pointer"
+        >
+          <div className="flex items-center space-x-2">
+            <DashboardOutlined className="text-red-500 text-base mt-1" />
+            <span className="p-0 m-0 text-black">Stats</span>
+          </div>
+          <p className="p-0 m-0"></p>
+        </NavLink>
+
+        <div className="flex items-center w-full justify-between hover:bg-gray-200 p-4 transition-all cursor-pointer">
+          <div className="flex items-center space-x-2">
+            <LogoutOutlined className="text-red-500 text-base mt-1" />
+
+            <span className="p-0 m-0 text-black">Log Out</span>
+          </div>
+        </div>
       </div>
     </aside>
   );
