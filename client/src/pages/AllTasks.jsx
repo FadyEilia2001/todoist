@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Checkbox, List } from "antd";
 import axios from "axios";
 import { useAppContext } from "../context/appContext";
@@ -12,6 +12,26 @@ const data = [
 ];
 
 const AllTasks = () => {
+  const { token } = useAppContext();
+
+  const getAllTasks = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/api/v1/tasks", {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getAllTasks();
+  }, []);
+
+  console.log(token);
   return (
     <div className="flex flex-col container mx-auto p-3">
       <h2 className="mb-4 font-extrabold">Your Tasks</h2>
@@ -27,10 +47,8 @@ const AllTasks = () => {
         dataSource={data}
         renderItem={(item) => (
           <List.Item className="hover:bg-gray-100 transition-all rounded-2xl mb-3 mx-2 mt-3">
-            <div>
-              <Checkbox className="mr-2" />
-              {item}
-            </div>
+            <Checkbox className="mr-2" />
+            {item}
           </List.Item>
         )}
       />

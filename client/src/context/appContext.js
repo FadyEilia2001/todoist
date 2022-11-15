@@ -69,7 +69,7 @@ export const AppProvider = ({ children }) => {
         payload: { token: response.data.token, user: response.data.user },
       });
 
-      localStorage.setItem("accessToken", `Bearer ${response.data.token}`);
+      localStorage.setItem("accessToken", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
     } catch (error) {
       console.log(error);
@@ -94,7 +94,7 @@ export const AppProvider = ({ children }) => {
         type: LOG_USER_SUCCESS,
         payload: { token: response.data.token, user: response.data.user },
       });
-      localStorage.setItem("accessToken", `Bearer ${response.data.token}`);
+      localStorage.setItem("accessToken", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
     } catch (error) {
       console.log(error);
