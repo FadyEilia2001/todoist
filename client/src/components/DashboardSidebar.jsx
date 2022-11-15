@@ -1,9 +1,7 @@
 import {
   CalendarOutlined,
   ProfileOutlined,
-  ProjectOutlined,
   DashboardOutlined,
-  PlusCircleOutlined,
   LogoutOutlined,
   PicRightOutlined,
 } from "@ant-design/icons";
@@ -12,14 +10,15 @@ import { NavLink } from "react-router-dom";
 
 const DashboardSidebar = () => {
   const { isSidebarOpen } = useAppContext();
+
   return (
     <aside
       className={`${
         isSidebarOpen ? "block" : "hidden"
-      } transition-all w-64 fixed md:relative z-10`}
+      } transition-all h-screen w-64 fixed md:relative z-10`}
       aria-label="Sidebar"
     >
-      <div className="overflow-y-auto py-4 bg-gray-50 h-screen">
+      <div className=" py-4 bg-gray-50 h-screen">
         {/* Dashboard */}
 
         {/* Menu Item 1 */}
@@ -32,7 +31,6 @@ const DashboardSidebar = () => {
 
             <span className="p-0 m-0 text-black">Due Today</span>
           </div>
-          <p className="p-0 m-0">10</p>
         </NavLink>
 
         {/* Menu item 2 */}
@@ -45,7 +43,6 @@ const DashboardSidebar = () => {
 
             <span className="p-0 m-0 text-black">All Tasks</span>
           </div>
-          <p className="p-0 m-0">4</p>
         </NavLink>
 
         {/* Menu item 3 */}
@@ -56,20 +53,18 @@ const DashboardSidebar = () => {
           <div className="flex items-center space-x-2">
             <PicRightOutlined className="text-red-500 text-base mt-1" />
 
-            <span className="p-0 m-0 text-black">Urgent</span>
+            <span className="p-0 m-0 text-black">Critical</span>
           </div>
-          <p className="p-0 m-0">21</p>
         </NavLink>
 
         <NavLink
-          to="/dashboard"
+          to="completed"
           className="flex items-center w-full justify-between hover:bg-gray-200 p-4 transition-all cursor-pointer"
         >
           <div className="flex items-center space-x-2">
             <DashboardOutlined className="text-red-500 text-base mt-1" />
-            <span className="p-0 m-0 text-black">Stats</span>
+            <span className="p-0 m-0 text-black">Completed</span>
           </div>
-          <p className="p-0 m-0"></p>
         </NavLink>
 
         <div className="flex items-center w-full justify-between hover:bg-gray-200 p-4 transition-all cursor-pointer">

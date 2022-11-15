@@ -1,7 +1,6 @@
 import React from "react";
 import DashboardNav from "../components/DashboardNav";
 import DashboardSidebar from "../components/DashboardSidebar";
-import { useAppContext } from "../context/appContext";
 import { Outlet } from "react-router-dom";
 
 const Dashboard = () => {

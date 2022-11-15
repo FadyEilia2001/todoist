@@ -19,7 +19,7 @@ const AllTasks = () => {
       });
 
       const activeTasks = response.data.tasks.filter(
-        (task) => task.status !== "complete"
+        (task) => task.status !== "Complete"
       );
 
       setAllTasks(activeTasks);
@@ -37,7 +37,7 @@ const AllTasks = () => {
   };
   return (
     <div className="container mx-auto">
-      <h2 className="mb-8 font-extrabold p-4">Your Tasks</h2>
+      <h2 className="mb-8 font-extrabold p-4">All of Your Tasks</h2>
       <div className="flex flex-col p-4 items-start justify-center container-sm mx-auto w-full space-y-4">
         {allTasks.map((item) => {
           return (

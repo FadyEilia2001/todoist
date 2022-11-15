@@ -1,8 +1,6 @@
 import React from "react";
-import { Modal, Divider } from "antd";
+import { Modal } from "antd";
 import { useAppContext } from "../context/appContext";
-import { Link } from "react-router-dom";
-import { HomeOutlined, BookOutlined, DollarOutlined } from "@ant-design/icons";
 
 const AddNewTask = () => {
   const { isTaskModalOpen, toggleAddTaskModal } = useAppContext();
@@ -39,7 +37,7 @@ const AddNewTask = () => {
       />
 
       <textarea
-        placeHolder="Task description...."
+        placeholder="Task description...."
         className="w-full mt-3 rounded-lg p-2 text-lg outline-none"
       />
 

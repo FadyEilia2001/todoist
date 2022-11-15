@@ -9,11 +9,11 @@ import {
   Login,
   Pricing,
   Templates,
-  Stats,
   DueToday,
   AllTasks,
   UrgentTasks,
   ProtectedRoute,
+  CompletedTasks,
 } from "./pages";
 
 function App() {
@@ -35,10 +35,11 @@ function App() {
             </ProtectedRoute>
           }
         >
-          <Route index element={<Stats />} />
+          <Route index element={<DueToday />} />
           <Route path="due-today" element={<DueToday />} />
           <Route path="all-tasks" element={<AllTasks />} />
           <Route path="urgent" element={<UrgentTasks />} />
+          <Route path="completed" element={<CompletedTasks />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

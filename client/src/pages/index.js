@@ -11,6 +11,7 @@ import DueToday from "./DueToday";
 import AllTasks from "./AllTasks";
 import UrgentTasks from "./UrgentTasks";
 import ProtectedRoute from "./ProtectedRoute";
+import CompletedTasks from "./CompletedTasks";
 
 export {
   Dashboard,
@@ -26,4 +27,5 @@ export {
   AllTasks,
   UrgentTasks,
   ProtectedRoute,
+  CompletedTasks,
 };
