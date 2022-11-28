@@ -1,0 +1,59 @@
+"filename", "language", "JSON", "Properties", "JavaScript", "Markdown", "JavaScript React", "CSS", "XML", "HTML", "comment", "blank", "total"
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\.env", "Properties", 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\README.md", "Markdown", 0, 0, 0, 10, 0, 0, 0, 0, 0, 12, 22
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\README.md", "Markdown", 0, 0, 0, 38, 0, 0, 0, 0, 0, 33, 71
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\package-lock.json", "JSON", 30020, 0, 0, 0, 0, 0, 0, 0, 0, 1, 30021
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\package.json", "JSON", 50, 0, 0, 0, 0, 0, 0, 0, 0, 1, 51
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\public\index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 26, 23, 1, 50
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\public\manifest.json", "JSON", 25, 0, 0, 0, 0, 0, 0, 0, 0, 1, 26
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\App.jsx", "JavaScript React", 0, 0, 0, 0, 45, 0, 0, 0, 0, 6, 51
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\assets\imgs\App.svg", "XML", 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\components\AddNewTask.jsx", "JavaScript React", 0, 0, 0, 0, 53, 0, 0, 0, 0, 4, 57
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\components\Alert.jsx", "JavaScript React", 0, 0, 0, 0, 15, 0, 0, 0, 0, 3, 18
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\components\Card.jsx", "JavaScript React", 0, 0, 0, 0, 28, 0, 0, 0, 0, 6, 34
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\components\DashboardNav.jsx", "JavaScript React", 0, 0, 0, 0, 45, 0, 0, 0, 0, 5, 50
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\components\DashboardSidebar.jsx", "JavaScript React", 0, 0, 0, 0, 66, 0, 0, 0, 4, 12, 82
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\components\Footer.jsx", "JavaScript React", 0, 0, 0, 0, 22, 0, 0, 0, 0, 2, 24
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\components\MobileMenu.jsx", "JavaScript React", 0, 0, 0, 0, 63, 0, 0, 0, 0, 8, 71
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\components\Navbar.jsx", "JavaScript React", 0, 0, 0, 0, 72, 0, 0, 0, 0, 8, 80
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\context\action.js", "JavaScript", 0, 0, 12, 0, 0, 0, 0, 0, 7, 7, 26
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\context\appContext.js", "JavaScript", 0, 0, 115, 0, 0, 0, 0, 0, 3, 17, 135
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\context\reducer.js", "JavaScript", 0, 0, 111, 0, 0, 0, 0, 0, 8, 10, 129
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\index.css", "CSS", 0, 0, 0, 0, 0, 8, 0, 0, 0, 5, 13
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\index.js", "JavaScript", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\AllTasks.jsx", "JavaScript React", 0, 0, 0, 0, 66, 0, 0, 0, 21, 9, 96
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\ComingSoon.jsx", "JavaScript React", 0, 0, 0, 0, 62, 0, 0, 0, 0, 1, 63
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\CompletedTasks.jsx", "JavaScript React", 0, 0, 0, 0, 67, 0, 0, 0, 0, 9, 76
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\Dashboard.jsx", "JavaScript React", 0, 0, 0, 0, 18, 0, 0, 0, 0, 2, 20
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\DueToday.jsx", "JavaScript React", 0, 0, 0, 0, 68, 0, 0, 0, 21, 9, 98
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\Error.jsx", "JavaScript React", 0, 0, 0, 0, 27, 0, 0, 0, 0, 3, 30
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\Landing.jsx", "JavaScript React", 0, 0, 0, 0, 78, 0, 0, 0, 0, 9, 87
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\Login.jsx", "JavaScript React", 0, 0, 0, 0, 165, 0, 0, 0, 10, 18, 193
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\Pricing.jsx", "JavaScript React", 0, 0, 0, 0, 132, 0, 0, 0, 0, 4, 136
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\ProtectedRoute.jsx", "JavaScript React", 0, 0, 0, 0, 10, 0, 0, 0, 0, 3, 13
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\Register.jsx", "JavaScript React", 0, 0, 0, 0, 165, 0, 0, 0, 10, 18, 193
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\Stats.jsx", "JavaScript React", 0, 0, 0, 0, 4, 0, 0, 0, 0, 1, 5
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\Templates.jsx", "JavaScript React", 0, 0, 0, 0, 22, 0, 0, 0, 0, 3, 25
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\UrgentTasks.jsx", "JavaScript React", 0, 0, 0, 0, 70, 0, 0, 0, 21, 11, 102
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\src\pages\index.js", "JavaScript", 0, 0, 30, 0, 0, 0, 0, 0, 0, 2, 32
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\client\tailwind.config.js", "JavaScript", 0, 0, 15, 0, 0, 0, 0, 0, 1, 1, 17
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\controllers\taskController.js", "JavaScript", 0, 0, 47, 0, 0, 0, 0, 0, 0, 10, 57
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\controllers\userController.js", "JavaScript", 0, 0, 41, 0, 0, 0, 0, 0, 1, 15, 57
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\db\connectDB.js", "JavaScript", 0, 0, 5, 0, 0, 0, 0, 0, 0, 3, 8
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\errors\bad-request.js", "JavaScript", 0, 0, 9, 0, 0, 0, 0, 0, 0, 3, 12
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\errors\custom-api.js", "JavaScript", 0, 0, 6, 0, 0, 0, 0, 0, 0, 2, 8
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\errors\index.js", "JavaScript", 0, 0, 12, 0, 0, 0, 0, 0, 0, 1, 13
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\errors\not-found.js", "JavaScript", 0, 0, 9, 0, 0, 0, 0, 0, 0, 3, 12
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\errors\unauthenticated.js", "JavaScript", 0, 0, 9, 0, 0, 0, 0, 0, 0, 3, 12
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\errors\unauthorized.js", "JavaScript", 0, 0, 9, 0, 0, 0, 0, 0, 0, 3, 12
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\middleware\authentication.js", "JavaScript", 0, 0, 19, 0, 0, 0, 0, 0, 2, 6, 27
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\middleware\error-handler.js", "JavaScript", 0, 0, 25, 0, 0, 0, 0, 0, 2, 3, 30
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\middleware\not-found.js", "JavaScript", 0, 0, 4, 0, 0, 0, 0, 0, 0, 2, 6
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\models\TaskModel.js", "JavaScript", 0, 0, 34, 0, 0, 0, 0, 0, 0, 3, 37
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\models\UserModel.js", "JavaScript", 0, 0, 51, 0, 0, 0, 0, 0, 4, 6, 61
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\package-lock.json", "JSON", 5025, 0, 0, 0, 0, 0, 0, 0, 0, 1, 5026
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\package.json", "JSON", 39, 0, 0, 0, 0, 0, 0, 0, 0, 1, 40
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\routes\taskRoutes.js", "JavaScript", 0, 0, 15, 0, 0, 0, 0, 0, 5, 9, 29
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\routes\userRoutes.js", "JavaScript", 0, 0, 6, 0, 0, 0, 0, 0, 0, 4, 10
+"c:\Users\feilia\Documents\Coding\projects\Mern\todoist\server.js", "JavaScript", 0, 0, 34, 0, 0, 0, 0, 0, 4, 12, 50
+"Total", "-", 35159, 4, 631, 48, 1363, 8, 1, 26, 147, 337, 37724
